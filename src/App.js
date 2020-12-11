@@ -89,9 +89,8 @@ function App() {
       }, 1000);
     }
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     return () => clearTimeout(idTimeOut);
-  }, [eventList]);
+  }, [eventList]); // eslint-disable-next-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     localStorage.setItem("events", JSON.stringify(eventList));

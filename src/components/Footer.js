@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <p>
         Created with <i className="fa fa-heart"></i> by
-        <a target="_blank" href="https://github.com/haykmell">
+        <a target="_blank" rel="noreferrer" href="https://github.com/haykmell">
           &nbsp;haykmell
         </a>
       </p>

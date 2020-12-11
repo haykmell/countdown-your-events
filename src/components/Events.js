@@ -1,11 +1,6 @@
 import React from "react";
 import TrashBtn from "./TrashBtn";
-import {
-  SVGCircle,
-  polarToCartesian,
-  describeArc,
-  mapNumber,
-} from "../SVGCircle";
+import { SVGCircle } from "../SVGCircle";
 import { BiAlarm } from "react-icons/bi";
 
 const Events = ({ eventList, removeEvent }) => {

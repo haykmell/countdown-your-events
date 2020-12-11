@@ -1,13 +1,228 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(10, 10, 10);
+}
+
+.container {
+  background: url("./assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  padding: 2rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  width: 30rem;
+  width: 100%;
+  height: 19rem;
+  background-color: rgb(36, 53, 95);
+  padding: 0rem 0rem 2rem 0rem;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  color: #fff;
+  overflow: hidden;
+  border: 4px solid rgb(29, 38, 73);
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 0.3rem;
+  font-size: 1.4rem;
+  background-color: rgb(67, 101, 186);
+  border: 2px solid rgb(16, 28, 56);
+  padding-left: 0.7rem;
+  color: white;
+  outline: none;
+}
+input::placeholder {
+  color: white;
+}
+input[type="date"]:invalid::-webkit-datetime-edit {
+  color: white;
+}
+.form-info {
+  padding: 0 2rem;
+}
+form h1 {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  color: white;
+  padding: 0.7rem;
+  background-color: rgb(0, 60, 255);
+  text-transform: uppercase;
+}
+.sub-btn {
+  margin-top: 1.5rem;
+  width: 30%;
+  height: 2.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(0, 60, 255);
+  outline: none;
+  border: 0;
+  color: white;
+  font-weight: 800;
+  font-size: 1.1rem;
+  transition: 0.2s;
+}
+.sub-btn:hover {
+  background-color: rgb(0, 60, 255, 0.7);
+}
+
+.container .event:hover {
+  background-color: rgb(0, 125, 255, 1);
+}
+.event h2 {
+  text-transform: capitalize;
+}
+.event-date {
+  display: flex;
+  justify-content: space-around;
+}
+
+.event-date > div {
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.event-date div p {
+  font-weight: 400;
+  margin-top: 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.remove-btn {
+  background-color: red;
+  outline: none;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 0.5rem 0.7rem;
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  border-radius: 0px 0px 5px 0px;
+  box-shadow: 0px 0px 7px rgba(255, 20, 20, 0.7);
+}
+
+.countdown-svg {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 100px;
+  height: 100px;
+  border-radius: 400px;
+  box-shadow: 0px 0px 10px rgb(8, 93, 204);
+}
+
+.container .event {
+  border-radius: 5px;
+  background-color: rgb(0, 132, 255);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.6rem;
+  box-shadow: 0px 0px 10px rgba(20, 76, 220, 0.7);
+  position: relative;
+  transition: 0.2s;
+}
+.countdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 30px;
+  margin: 10px;
+  padding-top: 10px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.container .event h2 {
+  margin-bottom: 0px;
+}
+
+.countdown-svg {
+  display: none;
+}
+
+.events {
+  margin-top: 1.5rem;
+}
+.cong-title,
+.cong-text {
+  margin: 0;
+  padding: 0;
+}
+.cong-text {
+  margin: -1rem;
+  padding-bottom: 3rem;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer i {
+  color: red;
+}
+
+footer a {
+  color: #3c97bf;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 490px) {
+  .countdown-svg {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1190px) {
+  .container {
+    padding: 2rem 8rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  form {
+    width: 30rem;
+  }
+  .container .event {
+    width: 30rem;
+  }
+  .container .event h2 {
+    margin-bottom: 1.4rem;
+  }
+  .events {
+    margin-top: 0rem;
+  }
 }
